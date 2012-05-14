@@ -1,0 +1,104 @@
+* {
+  margin:0;
+  padding:0;
+  font-family:Verdana,Arial,Helvetica;
+  color:#000000;
+  font-size:13px;
+}
+body {
+        min-width:150px;
+}
+
+#online_users {
+  margin-left:4px;
+  list-style:none;
+}
+
+#online_users > li.none {
+  font-style:italic;
+  color:#999999;
+}
+#online_users > li.user > span {
+}
+#online_users > li.user > span > div.avatar {
+  background-size:128px;
+  background-position: -16px -15px;
+  width:16px;
+  height:16px;
+  border:1px solid black;
+  margin-right:3px;
+  display:inline-block;
+  vertical-align:middle;
+}
+#online_users > li.user > span > span.name {
+  vertical-align:middle;
+}
+
+
+#playercard {
+  float:right;
+  width:222px;
+}
+#playercard > ul {
+  list-style-type:none;
+}
+#playercard > ul > li {
+  text-align:left;
+}
+#playercard #username {
+  font-size:1.6em;
+  padding-bottom:0.1em;
+  margin-bottom:0.8em;
+  border-bottom:2px solid #fd8912;
+  width:99%;
+} 
+#playercard .heart {
+  margin-right:-1px;
+}
+#playercard .food {
+  margin-right:-1px;
+}
+#playercard #xpbar {
+  background-image:url('/images/mc_icons/xp_bar.png');
+  background-repeat:no-repeat;
+  background-position:left bottom;
+  line-height:1.8em;
+  width:171px;
+  text-align:center;
+}
+#playercard #level {
+  font-weight:bold;
+  color:#80ff20;
+  text-shadow:
+    -1px  0   0 #000,
+     1px  0   0 #000,
+     0   -1px 0 #000,
+     0    1px 0 #000,
+
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+
+    -2px  0   0 #000,
+     2px  0   0 #000,
+     0   -2px 0 #000,
+     0    2px 0 #000,
+
+    -2px  1px 0 #000,
+    -1px  2px 0 #000,
+     1px  2px 0 #000,
+     2px  1px 0 #000,
+     2px -1px 0 #000,
+     1px -2px 0 #000,
+    -1px -2px 0 #000,
+    -2px -1px 0 #000;
+}
+#playercard #dimension {
+  margin-top:0.8em;
+  background-repeat:no-repeat;
+  padding-left:36px;
+  line-height:32px;
+  vertical-align:middle;
+  font-size:1.2em;
+}

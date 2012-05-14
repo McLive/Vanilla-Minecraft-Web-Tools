@@ -1,0 +1,51 @@
+[
+  {
+    "src"   : "images/slides/002.jpg",
+    "alt"   : "Verrückte Schaltung",
+    "title" : "Schienensystem Schaltung Reno"
+  }, {
+    "src"   : "images/slides/003.jpg",
+    "alt"   : "Machu Picchu Bahnhof",
+    "title" : "Machu Picchu Bahnhof"
+  }, {
+    "src"   : "images/slides/004.jpg",
+    "alt"   : "Landschaft mit Burg",
+    "title" : "Landschaft nördlich von Reno"
+  }, {
+    "src"   : "images/slides/005.jpg",
+    "alt"   : "Innenansicht Schmiede bei der Eröffnung",
+    "title" : "Reno Blacksmith Company - Opening"
+  }, {
+    "src"   : "images/slides/006.jpg",
+    "alt"   : "Hafen für zwei Boote",
+    "title" : "Hafen des Wohlstands"
+  }, {
+    "src"   : "images/slides/007.jpg",
+    "alt"   : "Pilzhäuser vor Sonnenuntergang",
+    "title" : "Mushroom Ville auf Lost Island"
+  }, {
+    "src"   : "images/slides/008.jpg",
+    "alt"   : "Schienenstrecke mit Bahnhof",
+    "title" : "Anfahrt Machu Picchu östlicher Richtung"
+  }, {
+    "src"   : "images/slides/009.jpg",
+    "alt"   : "Villagers in Minecarts auf Überseestrecke",
+    "title" : "Ferntransport von Villagers in die alte Welt"
+  }, {
+    "src"   : "images/slides/010.jpg",
+    "alt"   : "Villager in Minecart Untergrundbahn",
+    "title" : "Minecartphun im Untergrund"
+  }, {
+    "src"   : "images/slides/011.jpg",
+    "alt"   : "Villagers in Reno",
+    "title" : "Ankunft der Villagers in Reno"
+  }, {
+    "src"   : "images/slides/012.jpg",
+    "alt"   : "Villagers vor verlassenem Dorf",
+    "title" : "DerMose: 'Das ist eure neue Heimat'"
+  }, {
+    "src"   : "images/slides/013.jpg",
+    "alt"   : "Link in Reno",
+    "title" : "Chillin in Reno"
+  }
+]
