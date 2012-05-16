@@ -75,10 +75,9 @@ $(document).ready(function () {
 //Online Users
 //
 $(document).ready(function () {
-	var onlineUsers = new OnlineUsers();
-	onlineUsers.appendOnlineUsers();
+	$('#online_users').onlineUsers();
 	setInterval(function() {
-		onlineUsers.appendOnlineUsers();
+		$('#online_users').onlineUsers();
 	}, 20000);
 });
 
