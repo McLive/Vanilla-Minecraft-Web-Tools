@@ -1,0 +1,43 @@
+* {
+  margin:0;
+  padding:0;
+  font-family:Verdana,Arial,Helvetica;
+  color:#000000;
+  font-size:13px;
+}
+
+#online_users {
+  min-height: 53px;
+  margin-left:4px;
+  list-style:none;
+}
+
+#online_users > li.none {
+  font-style:italic;
+  color:#999999;
+}
+#notification {
+  background-image: url(icon.png);
+  background-repeat: no-repeat;
+  padding-top: 5px;
+  padding-left: 54px;
+  background-position: 3px 3px;
+  
+}
+
+
+#online_users > li.user > span {
+}
+#online_users > li.user > span > div.avatar {
+  background-size:128px;
+  background-position: -16px -15px;
+  width:16px;
+  height:16px;
+  border:1px solid black;
+  margin-right:3px;
+  display:inline-block;
+  vertical-align:middle;
+}
+#online_users > li.user > span > span.name {
+  vertical-align:middle;
+}

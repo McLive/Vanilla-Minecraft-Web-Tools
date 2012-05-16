@@ -75,64 +75,12 @@ $(document).ready(function () {
 //Online Users
 //
 $(document).ready(function () {
-		append_online_user();
-		setInterval("append_online_user()", 20000);
-	});
-var onlineUsers = [];
-var notiFirstLoad = true;
-function append_online_user() {
-	var json = "online_users.json";
-	if(GET('dev')=="true") {
-		json = "online_users_dev.json";
-	}
-	$.getJSON(json, function (data) {
-			if (window.webkitNotifications) {
-				var diff = data.online_users.diff(onlineUsers)
-				if(diff.length > 0) {
-					if (window.webkitNotifications.checkPermission() == 0) { // 0 is PERMISSION_ALLOWED
-						if(!notiFirstLoad) {
-							var noti = window.webkitNotifications.createNotification('favicon.ico', 'New user online', diff.toString());
-							noti.show();	
-						}
-						notiFirstLoad = false;
-					} else {
-						window.webkitNotifications.requestPermission();
-					}
-				}
-			}
-			onlineUsers = data.online_users.sort();
-			$("#online_users").empty();
-			if (onlineUsers.length < 1)
-				$("<li />")
-				.addClass("none")
-				.text("no users online")
-				.appendTo("#online_users");
-			else
-				for (var i = 0; i < onlineUsers.length; i++)
-					$('<li />').addClass("user")
-					.append($('<span />')
-						.append($('<div />')
-							.addClass('avatar')
-							.css("background-image", "url(\"http://www.minecraft.net/skin/" + onlineUsers[i] + ".png\")"))
-						.append($('<span />')
-							.addClass('name')
-							.append($('<a />')
-								.attr("href", 'skin/?user=' + onlineUsers[i] + '&fancybox=true')
-								.addClass('fancybox')
-								.addClass('fancybox.ajax')
-								.text(data.online_users[i])
-								.fancybox()
-								.fancybox({
-									'afterClose': function() {
-										clearInterval(rotation_loop);
-									}
-								})
-							)
-						))
-					.appendTo("#online_users");
-			
-		});
-}
+	var onlineUsers = new OnlineUsers();
+	onlineUsers.appendOnlineUser();
+	setInterval(function() {
+		onlineUsers.appendOnlineUser();
+	}, 20000);
+});
 
 //
 //Update Countdown
