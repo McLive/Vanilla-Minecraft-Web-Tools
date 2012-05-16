@@ -5,10 +5,17 @@ function OnlineUsers() {
 	this.appendOnlineUser = appendOnlineUser;
 	this.checkNotification = checkNotification;
 	
-	if(this.extension)
+	if(this.extension) {
+		this.json = localStorage.file;
 		this.getJSON = getJSONExtension;
-	else
+	}
+	else {
+		if(Helper.getParameter('dev') == 'undefined')
+			this.json = 'online_users.json';
+		else
+			this.json = 'online_users_dev.json';
 		this.getJSON = $.getJSON;
+	}
 }
 
 function getPlayerUrl(player) {
@@ -55,27 +62,25 @@ function appendOnlineUser(player) {
 }
 
 function appendOnlineUsers() {
-	var json = localStorage.file;
-	Helper.getJSON(json, function(data) {
-		this.onlineUsers = data.online_users.sort();
+	var $this = this;
+	Helper.getJSON(this.json, function(data) {
+		$this.onlineUsers = data.online_users.sort();
 		$("#online_users").empty();
-		if (this.onlineUsers.length < 1)
+		if ($this.onlineUsers.length < 1)
 			$("<li />")
 				.addClass("none")
 				.text("no users online")
 				.appendTo("#online_users");
 		else
-			for (var i = 0; i < this.onlineUsers.length; i++)
-				this.appendOnlineUser(this.onlineUsers[i]);
+			for (var i = 0; i < $this.onlineUsers.length; i++)
+				$this.appendOnlineUser($this.onlineUsers[i]);
 	
 	});
 }
 
 function checkNotification() {
 	if(JSON.parse(localStorage.isActivated)) {
-		var json = localStorage.file;
-		var $this = this;
-		Helper.getJSON(json, function(data) {
+		Helper.getJSON(this.json, function(data) {
 			if (window.webkitNotifications) {
 							console.log(data);
 				var diff = data.online_users.diff($this.onlineUsers)

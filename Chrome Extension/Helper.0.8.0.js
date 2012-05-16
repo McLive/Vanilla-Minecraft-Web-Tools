@@ -6,7 +6,7 @@ function Helper() {
 }
 
 Helper.prototype.isExtension = function() {
-	return typeof(chrome.extension) != 'undefined';
+	return typeof(chrome) != 'undefined' && typeof(chrome.extension) != 'undefined';
 }
 //Parameter
 Helper.prototype.httpGetVars;
