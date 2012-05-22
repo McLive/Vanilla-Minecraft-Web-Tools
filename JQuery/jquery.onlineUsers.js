@@ -79,7 +79,7 @@ function getJSONExtension(json, callback) {
 	this.appendOnlineUser = appendOnlineUser;
 	this.checkNotification = checkNotification;
 	
-	if(this.extension) {
+	if(Helper.isExtension()) {
 		if(typeof(json) == 'undefined')
 			this.json = localStorage.file;
 		this.getJSON = getJSONExtension;
@@ -166,6 +166,7 @@ function appendOnlineUsers(element) {
 
 function checkNotification() {
 	if(JSON.parse(localStorage.isActivated)) {
+		var $this = this;
 		Helper.getJSON(this.json, function(data) {
 			if (window.webkitNotifications) {
 							console.log(data);
